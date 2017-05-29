@@ -1,0 +1,22 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 27, 2017
+ *
+ */
+package singleton;
+
+public class UserNameRegistration {
+	//single instance
+	private static final UserNameRegistration uniqueUserName = new UserNameRegistration();
+
+	//private constructor
+	private UserNameRegistration(){}
+	
+	//get instance
+	public static UserNameRegistration getUserName(){
+		return uniqueUserName;
+	}
+}
+
+
+
