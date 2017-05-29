@@ -26,7 +26,9 @@ public class UserNameApplication {
 			System.out.println("Enter user name.");
 			userName = scan.nextLine();
 			
+			//get Singleton
 			register.getSingeltonOfUserName();
+			//test Singleton performed as expected
 			register.uniqueSingleton();
 			input = scan.nextLine();
 			System.out.println("Welcome to sEATs. Your user name is " + userName + ".");
