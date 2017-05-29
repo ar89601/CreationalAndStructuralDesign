@@ -7,14 +7,18 @@ package singleton;
 
 public class UserNameRegistration {
 	//single instance
-	private static final UserNameRegistration uniqueUserName = new UserNameRegistration();
+	private static final UserNameRegistration UserName = new UserNameRegistration();
 
 	//private constructor
 	private UserNameRegistration(){}
 	
 	//get instance
-	public static UserNameRegistration getUserName(){
-		return uniqueUserName;
+	public static UserNameRegistration getSingeltonOfUserName(){
+		return UserName;
+	}
+	
+	protected static void uniqueSingleton(){
+		System.out.println("User name accepted. Please enter a password.");
 	}
 }
 
