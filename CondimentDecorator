@@ -1,0 +1,22 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+abstract class CondimentDecorator implements Condiment {
+
+	protected Condiment condiment;
+
+	// constructor
+	public CondimentDecorator(Condiment c) {
+		this.condiment = c;
+	}
+
+	// specific name method for condiment decorator
+	@Override
+	public void name() {
+		this.condiment.name();
+	}
+}
