@@ -1,0 +1,15 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class CondimentComponent implements Condiment {
+	// specific name method for condiment component
+	@Override
+	public void name() {
+		System.out.println("Please select the condiment type you would like to add: \nveggies \nsauces \nextras "
+				+ "\nOr ‘quit’ to exit.");
+	}
+}
