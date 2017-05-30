@@ -1,0 +1,11 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+// interface to hold name method
+public interface Condiment {
+	void name();
+}
