@@ -1,0 +1,20 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Sauces extends CondimentDecorator {
+	// constructor
+	public Sauces(Condiment c){
+		super(c);
+	}
+	
+	// specific name method for sauces
+	@Override
+	public void name(){
+		System.out.println("Please select the sauces you would like to add: "
+				+ "\nketchup \nmustard \nmayo \nOr ‘quit’ to exit.");
+	}
+}
