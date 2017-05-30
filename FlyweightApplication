@@ -1,0 +1,54 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package flyweight;
+
+import java.util.Scanner;
+
+public class FlyweightApplication {
+	// array to hold currency symbols
+	private static final String currency[] = { "€", "$", "£" };
+
+	public static void main(String[] args) {
+		   Scanner scan = new Scanner(System.in);
+		   String input;
+		   
+		   // output to console
+		   System.out.println("You have reached the payment screen. Please type the currency to pay for your order: "
+		   		+ "\nEuro \nDollar \nPound");
+		   input = scan.nextLine();
+	       
+		   // if user types 'euro', user receives message with euro symbol
+		   if(input.equalsIgnoreCase("euro")){
+		   Currency money = (Currency)FlyweightFactory.getCurrency(getEuro());   
+	       money.draw();
+		   
+		   // if user types 'dollar', user receives message with dollar symbol
+		   }else if(input.equalsIgnoreCase("dollar")){
+		   Currency money = (Currency)FlyweightFactory.getCurrency(getDollar());   
+		   money.draw(); 
+		   // if user types 'pound', user receives message with pound symbol
+		   }else if(input.equalsIgnoreCase("pound")){
+			   Currency money = (Currency)FlyweightFactory.getCurrency(getPound());   
+			   money.draw(); 
+		   // message for user to enter correct input
+		   }else {
+				System.out.println("Please retry by typing 'euro', 'dollar' or 'pound'.");
+				System.exit(0);
+			}
+	       scan.close();
+	      }
+
+	//get appropriate currency symbol for user input
+	private static String getEuro() {
+		return currency[0];
+	}
+	private static String getDollar() {
+		return currency[1];
+	}
+	private static String getPound() {
+		return currency[2];
+	}
+}
