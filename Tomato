@@ -1,0 +1,19 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Tomato extends Veggies{
+	//constructor
+	public Tomato(Condiment c){
+		super(c);
+	}
+	
+	// specific name method for tomato
+	@Override
+	public void name(){
+		System.out.println("You have selected tomato. Type 'c' to continue.");
+	}
+}
