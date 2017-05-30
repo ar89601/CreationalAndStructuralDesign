@@ -5,6 +5,7 @@
  */
 package factory;
 
+//interface to getSpecialMessage method
 public interface RegisteredUser {
 	public void getSpecialMessage();
 }
