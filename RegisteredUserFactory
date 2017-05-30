@@ -6,6 +6,7 @@
 package factory;
 
 public class RegisteredUserFactory {
+	//returns appropriate user message based upon the number of times user has ordered through sEATs
 	public static RegisteredUser getRegisteredUser(Integer criteria){
 		if(criteria.equals(0))
 			return new NewUser();
