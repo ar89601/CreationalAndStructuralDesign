@@ -12,19 +12,20 @@ public class FactoryApplication {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String input;
-		Integer visits = 0;
+		Integer orders = 0;
 		
 		// output to console
 		System.out.println("Welcome back to sEATs. Type 'message' to reveal a sEATs promo.");
 		input = scan.nextLine();
 		
-		// if user wants to register
+		// if user wants to receive message
 		if ("message".equalsIgnoreCase(input)) {
 			System.out.println("sEATs has a special message for you. Please enter the number of times you have "
 					+ "ordered from sEATs.");
-			visits = scan.nextInt();
+			orders = scan.nextInt();
 		
-		RegisteredUser user = RegisteredUserFactory.getRegisteredUser(visits);
+		//responds with message based upon number of orders
+		RegisteredUser user = RegisteredUserFactory.getRegisteredUser(orders);
 		user.getSpecialMessage();
 		}
 		scan.close();
