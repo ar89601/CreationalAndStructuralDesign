@@ -1,0 +1,36 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 29, 2017
+ *
+ */
+package factory;
+
+import java.util.Scanner;
+
+public class FactoryApplication {
+	//main method to get a special message based upon sEATs usage
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String input;
+		Integer visits = 0;
+		
+		// output to console
+		System.out.println("Welcome back to sEATs. Type 'message' to reveal a sEATs promo.");
+		input = scan.nextLine();
+		
+		// if user wants to register
+		if ("message".equalsIgnoreCase(input)) {
+			System.out.println("sEATs has a special message for you. Please enter the number of times you have "
+					+ "ordered from sEATs.");
+			visits = scan.nextInt();
+		
+		RegisteredUser user = RegisteredUserFactory.getRegisteredUser(visits);
+		user.getSpecialMessage();
+		}
+		scan.close();
+	}	
+}
+
+
+
+
