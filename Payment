@@ -1,0 +1,11 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package flyweight;
+
+// interface to hold draw method
+public interface Payment {
+	void draw();
+}
