@@ -1,0 +1,19 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Onion extends Veggies{
+	//constructor
+	public Onion(Condiment c){
+		super(c);
+	}
+	
+	// specific name method for onion
+	@Override
+	public void name(){
+		System.out.println("You have selected onion. Type 'c' to continue.");
+	}
+}
