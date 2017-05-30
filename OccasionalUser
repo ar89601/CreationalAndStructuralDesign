@@ -1,0 +1,13 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 29, 2017
+ *
+ */
+package factory;
+
+public class OccasionalUser implements RegisteredUser{
+	public void getSpecialMessage(){
+		System.out.println("Thank you for being a sEATs customer. As a thank you for ordering with us in the past, "
+				+ "\nplease use the code ‘10OFF’ for a 10% discount with your next meal purchase.");
+	}
+}
