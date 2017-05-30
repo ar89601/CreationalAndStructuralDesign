@@ -1,0 +1,21 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package flyweight;
+
+public class Currency implements Payment{
+private String currency;
+	
+	// constructor
+	public Currency(String currency){
+		this.currency = currency;
+	}
+	
+	// draw method for currency class
+	@Override
+	public void draw(){
+		System.out.println("You have chosen to pay in " + currency + ".");
+	}
+}
