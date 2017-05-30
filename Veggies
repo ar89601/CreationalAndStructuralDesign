@@ -1,0 +1,20 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Veggies extends CondimentDecorator {
+	//constructor
+	public Veggies(Condiment c){
+		super(c);
+	}
+	
+	// specific name method for veggies
+	@Override
+	public void name(){
+		System.out.println("Please select the veggies you would like to add: "
+				+ "\nlettuce \ntomato \nonion \nOr ‘quit’ to exit.");
+	}
+}
