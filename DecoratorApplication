@@ -1,0 +1,83 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+import java.util.Scanner;
+
+public class DecoratorApplication {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String menuItem;
+		String cond;
+		String veg;
+		String c;
+
+		System.out.println("Please select a menu item.");
+		menuItem = scan.nextLine();
+
+		// displays menu to add Condiment
+		Condiment addCondiment = new CondimentComponent();
+		addCondiment.name();
+		System.out.println("\n*****");
+		cond = scan.nextLine();
+
+		// variables to add veggies, sauces or extras respectively
+		Condiment addVeg = new Veggies(new CondimentComponent());
+		Condiment addSauce = new Sauces(new CondimentComponent());
+		Condiment addExtra = new Extras(new CondimentComponent());
+
+		// prints appropriate message to console based on user input
+		if (cond.equalsIgnoreCase("veggies")) {
+			addVeg.name();
+			System.out.println("\n*****");
+		} else if (cond.equalsIgnoreCase("sauces")) {
+			addSauce.name();
+			System.out.println("\n*****");
+		} else if (cond.equalsIgnoreCase("extras")) {
+			addExtra.name();
+			System.out.println("\n*****");
+		} else if (cond.equalsIgnoreCase("quit")) {
+			System.exit(0);
+		} else {
+			System.out.println("Please retry by typing 'veggies', 'sauces' or 'extras'.");
+			System.exit(0);
+		}
+
+		veg = scan.nextLine();
+
+		// variables to add lettuce, tomator or onion respectively
+		Condiment addLettuce = new Lettuce(new Veggies(new CondimentComponent()));
+		Condiment addTomato = new Tomato(new Veggies(new CondimentComponent()));
+		Condiment addOnion = new Onion(new Veggies(new CondimentComponent()));
+
+		// prints appropriate message to console based on user input
+		if (veg.equalsIgnoreCase("lettuce")) {
+			addLettuce.name();
+			System.out.println("\n*****");
+		} else if (veg.equalsIgnoreCase("tomato")) {
+			addTomato.name();
+			System.out.println("\n*****");
+		} else if (veg.equalsIgnoreCase("onion")) {
+			addOnion.name();
+			System.out.println("\n*****");
+		} else if (veg.equalsIgnoreCase("quit")) {
+			System.exit(0);
+		} else {
+			System.out.println("Please retry by typing 'lettuce', 'tomato' or 'onion'.");
+			System.exit(0);
+		}
+
+		// user inputs 'c' to continue
+		c = scan.nextLine();
+		if (c.equalsIgnoreCase("c")) {
+			System.out.println("You have chosen a " + menuItem + " with " + veg + " at $6. "
+					+ "\nPlease type ‘pay’ to access the payment screen.");
+		} else {
+			System.exit(0);
+		}
+		scan.close();
+	}
+}
