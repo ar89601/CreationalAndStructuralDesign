@@ -6,6 +6,7 @@
 package factory;
 
 public class FrequentUser implements RegisteredUser{
+	//specific method for FrequentUser
 	public void getSpecialMessage(){
 		System.out.println("Thank you for continuing to order through sEATs. As a thank you for being a frequent customer, "
 				+ "\nplease use the code ‘20OFF’ for a 20% discount with your next meal purchase.");
