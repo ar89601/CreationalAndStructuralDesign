@@ -6,6 +6,7 @@
 package factory;
 
 public class NewUser implements RegisteredUser {
+	//specific method for NewUser
 	public void getSpecialMessage(){
 		System.out.println("Thank you for joining sEATs for your concession needs. As a new user, please return "
 				+ "\nafter your first order for a special thank you.");
