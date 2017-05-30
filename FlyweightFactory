@@ -1,0 +1,24 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package flyweight;
+
+import java.util.HashMap;
+
+public class FlyweightFactory {
+	// hashmap to store currency
+	private static final HashMap<String, Payment> currencyMap = new HashMap();
+
+	//get correct currency method
+	public static Payment getCurrency(String currency) {
+		Currency money = (Currency) currencyMap.get(currency);
+		if (money == null) {
+			money = new Currency(currency);
+			currencyMap.put(currency, money);
+			System.out.println("Updating currency to: " + currency);
+		}
+		return money;
+	}
+}
