@@ -1,0 +1,13 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 29, 2017
+ *
+ */
+package factory;
+
+public class NewUser implements RegisteredUser {
+	public void getSpecialMessage(){
+		System.out.println("Thank you for joining sEATs for your concession needs. As a new user, please return "
+				+ "\nafter your first order for a special thank you.");
+	}
+}
