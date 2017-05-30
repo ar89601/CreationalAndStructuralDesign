@@ -1,0 +1,21 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Extras extends CondimentDecorator {
+
+	// constructor
+	public Extras(Condiment c) {
+		super(c);
+	}
+
+	// specific name method for extras
+	@Override
+	public void name() {
+		System.out.println("Please select the extras you would like to add: "
+				+ "\nextra cheese \nextra veggies \nextra sauce \nOr ‘quit’ to exit.");
+	}
+}
