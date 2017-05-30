@@ -1,0 +1,21 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 29, 2017
+ *
+ */
+package factory;
+
+public class RegisteredUserFactory {
+	public static RegisteredUser getRegisteredUser(Integer criteria){
+		if(criteria.equals(0))
+			return new NewUser();
+		else if(criteria.equals(1) || criteria.equals(2) || criteria.equals(3) || criteria.equals(4) || criteria.equals(5))
+			return new OccasionalUser();
+		else if(criteria.equals(6) || criteria.equals(7) || criteria.equals(8) || criteria.equals(9) || criteria.equals(10))
+			return new FrequentUser();
+		else if(criteria.equals(11)|| criteria.equals(12) || criteria.equals(13) || criteria.equals(14) || criteria.equals(15))
+			return new EliteUser();
+		return null;
+	}
+	
+}
