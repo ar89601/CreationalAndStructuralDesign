@@ -1,0 +1,19 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 30, 2017
+ *
+ */
+package decorator;
+
+public class Lettuce extends Veggies {
+	// constructor
+	public Lettuce(Condiment c){
+		super(c);
+	}
+	
+	// specific name method for lettuce
+	@Override
+	public void name(){
+		System.out.println("You have selected lettuce. Type 'c' to continue.");
+	}
+}
