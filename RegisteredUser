@@ -1,0 +1,10 @@
+/**
+ * @author Ashley.Ridout
+ * @date May 29, 2017
+ *
+ */
+package factory;
+
+public interface RegisteredUser {
+	public void getSpecialMessage();
+}
